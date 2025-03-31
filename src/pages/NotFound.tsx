@@ -1,8 +1,11 @@
-import { useLocation } from "react-router-dom";
+
 import { useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import KittyCard from "../components/KittyCard";
 
 const NotFound = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     console.error(
@@ -12,14 +15,20 @@ const NotFound = () => {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
+    <div className="min-h-screen flex items-center justify-center bg-kitty-gray p-4">
+      <KittyCard className="text-center max-w-md">
+        <div className="text-7xl mb-6 animate-bounce-slow">😿</div>
+        <h1 className="text-3xl font-bold text-pink-800 mb-4">Oops! Page Not Found</h1>
+        <p className="text-gray-600 mb-8">
+          Oh no! The page you're looking for seems to have wandered off.
+        </p>
+        <button 
+          onClick={() => navigate("/")}
+          className="kitty-button"
+        >
           Return to Home
-        </a>
-      </div>
+        </button>
+      </KittyCard>
     </div>
   );
 };
