@@ -18,9 +18,11 @@ const Home = () => {
       <div className="min-h-[80vh] flex flex-col items-center justify-center">
         <div className={`max-w-3xl mx-auto text-center transition-opacity duration-1000 ${loaded ? "opacity-100" : "opacity-0"}`}>
           <div className="relative w-48 h-48 mx-auto mb-8">
-            <div className="w-40 h-40 bg-white rounded-full border-4 border-kitty-pink flex items-center justify-center mx-auto kawaii-shadow animate-bounce-slow">
-              <div className="text-6xl font-comic font-bold text-pink-800">UL</div>
-            </div>
+            <img 
+              src="/lovable-uploads/85fa5dfc-1840-4c89-9ab8-a2d4795979b8.png" 
+              alt="Uriel with Hello Kitty decorations" 
+              className="w-48 h-48 object-cover rounded-full border-4 border-kitty-pink kawaii-shadow"
+            />
             <KittyBow className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-20 h-10" />
           </div>
           
