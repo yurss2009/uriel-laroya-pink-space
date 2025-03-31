@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies - Uriel's World</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="logo">
+          <div class="logo-circle">
+            <span>UL</span>
+          </div>
+          <span class="logo-text">Uriel's World</span>
+        </a>
+        
+        <div class="menu-button">
+          <button id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+        
+        <div class="desktop-menu">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="profile.html" class="nav-link">PROFILE</a>
+          <a href="hobbies.html" class="nav-link active">HOBBIES</a>
+          <a href="skills.html" class="nav-link">SKILLS</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-nav-link">HOME</a>
+        <a href="profile.html" class="mobile-nav-link">PROFILE</a>
+        <a href="hobbies.html" class="mobile-nav-link active">HOBBIES</a>
+        <a href="skills.html" class="mobile-nav-link">SKILLS</a>
+        <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-content">
+      <div class="kitty-heading">
+        <h2>My Hobbies</h2>
+      </div>
+
+      <div class="kitty-card hobby-feature">
+        <div class="hobby-content">
+          <div class="hobby-image">
+            <div class="hobby-icon-container">
+              <span class="hobby-icon">🏀</span>
+            </div>
+          </div>
+          <div class="hobby-description">
+            <h3 class="hobby-title">Basketball</h3>
+            <p class="hobby-text">
+              Basketball is more than just a hobby for me—it's a passion that has shaped my life in countless ways. 
+              I started playing when I was just 8 years old, captivated by the energy and teamwork I saw in NBA games. 
+              What began as casual shooting hoops in our neighborhood has evolved into a serious commitment.
+            </p>
+            <p class="hobby-text">
+              I practice almost daily, focusing on improving my dribbling skills and shooting accuracy. 
+              There's something incredibly satisfying about the swish sound when the ball goes cleanly through the net. 
+              I play point guard for our school team at San Beda College Alabang, where I've learned the value of 
+              leadership, quick thinking, and staying calm under pressure.
+            </p>
+            <p class="hobby-text">
+              Beyond the physical benefits, basketball has taught me invaluable life lessons about perseverance and teamwork. 
+              When we lose a game, it's an opportunity to analyze our mistakes and come back stronger. 
+              When we win, it's a celebration of our collective effort and strategy.
+            </p>
+            <p class="hobby-text">
+              Some of my fondest memories involve tournament games with my teammates, especially our dramatic comeback win 
+              in last year's interschool competition. The hours of practice, the strategic discussions, the shared 
+              victories and defeats—all of these experiences have created bonds that extend beyond the court.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hobby-grid">
+        <div class="kitty-card">
+          <h3 class="hobby-title">Video Games</h3>
+          <div class="hobby-icon-container small">
+            <span class="hobby-icon">🎮</span>
+          </div>
+          <p class="hobby-text">
+            In my free time, I enjoy playing video games that challenge my strategic thinking and reaction time. 
+            My favorites include basketball simulation games where I can apply my knowledge of the sport virtually, 
+            and adventure games that tell compelling stories.
+          </p>
+        </div>
+
+        <div class="kitty-card">
+          <h3 class="hobby-title">Watching Anime</h3>
+          <div class="hobby-icon-container small">
+            <span class="hobby-icon">📺</span>
+          </div>
+          <p class="hobby-text">
+            I'm a big fan of anime, especially sports-themed series like "Kuroko no Basket" that combine exciting action 
+            with messages about determination and friendship. I also enjoy slice-of-life shows that help me relax after a 
+            busy school day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kitty-footer">
+    <div class="container">
+      <p class="footer-text">
+        Made with 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        by Uriel Laroya &copy; <span id="currentYear"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

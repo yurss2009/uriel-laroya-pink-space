@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found - Uriel's World</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .error-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--kitty-gray);
+      padding: 1rem;
+    }
+    
+    .error-emoji {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      animation: bounce 2s infinite;
+    }
+    
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="error-container">
+    <div class="kitty-card text-center" style="max-width: 28rem;">
+      <div class="error-emoji">😿</div>
+      <h1 class="welcome-title">Oops! Page Not Found</h1>
+      <p class="welcome-text">
+        Oh no! The page you're looking for seems to have wandered off.
+      </p>
+      <a href="index.html" class="kitty-button">Return to Home</a>
+    </div>
+  </div>
+  
+  <script>
+    console.error("404 Error: User attempted to access non-existent page");
+  </script>
+</body>
+</html>

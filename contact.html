@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Uriel's World</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="logo">
+          <div class="logo-circle">
+            <span>UL</span>
+          </div>
+          <span class="logo-text">Uriel's World</span>
+        </a>
+        
+        <div class="menu-button">
+          <button id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+        
+        <div class="desktop-menu">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="profile.html" class="nav-link">PROFILE</a>
+          <a href="hobbies.html" class="nav-link">HOBBIES</a>
+          <a href="skills.html" class="nav-link">SKILLS</a>
+          <a href="contact.html" class="nav-link active">CONTACT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-nav-link">HOME</a>
+        <a href="profile.html" class="mobile-nav-link">PROFILE</a>
+        <a href="hobbies.html" class="mobile-nav-link">HOBBIES</a>
+        <a href="skills.html" class="mobile-nav-link">SKILLS</a>
+        <a href="contact.html" class="mobile-nav-link active">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-content">
+      <div class="kitty-heading">
+        <h2>Get In Touch</h2>
+      </div>
+
+      <div class="kitty-card contact-card">
+        <div class="contact-intro">
+          <p>
+            I'd love to hear from you! Whether you want to talk about basketball, coding, or just say hello, 
+            feel free to reach out using any of the contact methods below.
+          </p>
+        </div>
+
+        <div class="contact-methods">
+          <div class="contact-method">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <h3 class="contact-type">Phone</h3>
+              <p class="contact-value">09958507713</p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">📧</div>
+            <div class="contact-details">
+              <h3 class="contact-type">Email</h3>
+              <p class="contact-value">
+                <a href="mailto:laroyauriel@gmail.com" class="contact-link">laroyauriel@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <div class="contact-icon">🏫</div>
+            <div class="contact-details">
+              <h3 class="contact-type">School</h3>
+              <p class="contact-value">San Beda College Alabang</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="kitty-card message-card">
+        <h3 class="section-title">Send Me A Message</h3>
+        <form id="contactForm" class="contact-form">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="kitty-button submit-button">Send Message</button>
+        </form>
+        <div id="formStatus" class="form-status"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kitty-footer">
+    <div class="container">
+      <p class="footer-text">
+        Made with 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        by Uriel Laroya &copy; <span id="currentYear"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Form handling (simulated since it's a static site)
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      const formStatus = document.getElementById('formStatus');
+      formStatus.innerHTML = '<div class="success-message">Thank you for your message! I\'ll get back to you soon.</div>';
+      
+      // Reset form
+      event.target.reset();
+      
+      // Clear success message after 5 seconds
+      setTimeout(function() {
+        formStatus.innerHTML = '';
+      }, 5000);
+    });
+  </script>
+</body>
+</html>

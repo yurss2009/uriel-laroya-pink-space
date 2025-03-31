@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile - Uriel's World</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="logo">
+          <div class="logo-circle">
+            <span>UL</span>
+          </div>
+          <span class="logo-text">Uriel's World</span>
+        </a>
+        
+        <div class="menu-button">
+          <button id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+        
+        <div class="desktop-menu">
+          <a href="index.html" class="nav-link">HOME</a>
+          <a href="profile.html" class="nav-link active">PROFILE</a>
+          <a href="hobbies.html" class="nav-link">HOBBIES</a>
+          <a href="skills.html" class="nav-link">SKILLS</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-nav-link">HOME</a>
+        <a href="profile.html" class="mobile-nav-link active">PROFILE</a>
+        <a href="hobbies.html" class="mobile-nav-link">HOBBIES</a>
+        <a href="skills.html" class="mobile-nav-link">SKILLS</a>
+        <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <div class="page-content">
+      <div class="kitty-heading">
+        <h2>My Profile</h2>
+      </div>
+
+      <div class="profile-grid">
+        <div class="profile-sidebar">
+          <div class="kitty-card text-center">
+            <div class="profile-avatar-container">
+              <div class="profile-avatar">
+                <div class="avatar-text">UL</div>
+              </div>
+              <div class="kitty-bow small-bow"></div>
+            </div>
+            <h3 class="profile-name">Uriel Laroya</h3>
+            <p class="profile-role">Grade 10 Student</p>
+            <p class="profile-school">San Beda College Alabang</p>
+          </div>
+        </div>
+
+        <div class="profile-main">
+          <div class="kitty-card">
+            <h3 class="section-title">About Me</h3>
+            <p class="profile-text">
+              Hello! I'm Uriel Laroya, a Grade 10 student at San Beda College Alabang with a passion for basketball, 
+              taekwondo, and coding. I enjoy balancing my academic life with my various hobbies and interests.
+            </p>
+            <p class="profile-text">
+              I'm a friendly and enthusiastic person who loves to learn new things and challenge myself. 
+              My friends would describe me as reliable, creative, and always ready to help others.
+            </p>
+            <p class="profile-text">
+              When I'm not studying or practicing sports, you might find me coding new projects or 
+              exploring the latest technology trends. I'm excited to share more about myself through this website!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="kitty-card">
+        <h3 class="section-title">Personal Details</h3>
+        <div class="personal-details-grid">
+          <div class="detail-item">
+            <div class="detail-icon">🎂</div>
+            <div class="detail-content">
+              <p class="detail-label">Birthdate</p>
+              <p class="detail-value">January 21, 2009</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📏</div>
+            <div class="detail-content">
+              <p class="detail-label">Height</p>
+              <p class="detail-value">5'1"</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">📚</div>
+            <div class="detail-content">
+              <p class="detail-label">School</p>
+              <p class="detail-value">San Beda College Alabang</p>
+            </div>
+          </div>
+          <div class="detail-item">
+            <div class="detail-icon">🎮</div>
+            <div class="detail-content">
+              <p class="detail-label">Interests</p>
+              <p class="detail-value">Basketball, Coding, Taekwondo</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="kitty-footer">
+    <div class="container">
+      <p class="footer-text">
+        Made with 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        by Uriel Laroya &copy; <span id="currentYear"></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

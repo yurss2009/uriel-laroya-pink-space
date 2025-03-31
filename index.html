@@ -1,27 +1,104 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Uriel Laroya | Hello Kitty Homepage</title>
-    <meta name="description" content="Uriel Laroya's personal homepage with a Hello Kitty theme" />
-    <meta name="author" content="Uriel Laroya" />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uriel's World</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container">
+      <div class="navbar-content">
+        <a href="index.html" class="logo">
+          <div class="logo-circle">
+            <span>UL</span>
+          </div>
+          <span class="logo-text">Uriel's World</span>
+        </a>
+        
+        <div class="menu-button">
+          <button id="menuToggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+        </div>
+        
+        <div class="desktop-menu">
+          <a href="index.html" class="nav-link active">HOME</a>
+          <a href="profile.html" class="nav-link">PROFILE</a>
+          <a href="hobbies.html" class="nav-link">HOBBIES</a>
+          <a href="skills.html" class="nav-link">SKILLS</a>
+          <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+      </div>
+    </div>
+    
+    <div id="mobileMenu" class="mobile-menu">
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-nav-link active">HOME</a>
+        <a href="profile.html" class="mobile-nav-link">PROFILE</a>
+        <a href="hobbies.html" class="mobile-nav-link">HOBBIES</a>
+        <a href="skills.html" class="mobile-nav-link">SKILLS</a>
+        <a href="contact.html" class="mobile-nav-link">CONTACT</a>
+      </div>
+    </div>
+  </nav>
 
-    <meta property="og:title" content="Uriel Laroya | Hello Kitty Homepage" />
-    <meta property="og:description" content="Uriel Laroya's personal homepage with a Hello Kitty theme" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <main class="container">
+    <div class="home-content">
+      <div class="profile-image-container">
+        <img src="images/uriel.png" alt="Uriel with Hello Kitty decorations" class="profile-image">
+        <div class="kitty-bow"></div>
+      </div>
+      
+      <div class="kitty-card welcome-card">
+        <h1 class="welcome-title">Welcome to Uriel's World!</h1>
+        <p class="welcome-text">
+          Hi there! I'm <span class="highlight">Uriel Laroya</span>, a Grade 10 student at San Beda College Alabang.
+          Welcome to my kawaii little corner of the internet!
+        </p>
+        <div class="button-group">
+          <a href="profile.html" class="kitty-button">About Me</a>
+          <a href="hobbies.html" class="kitty-button">My Hobbies</a>
+          <a href="skills.html" class="kitty-button">My Skills</a>
+          <a href="contact.html" class="kitty-button">Get In Touch</a>
+        </div>
+      </div>
+      
+      <div class="click-hint">
+        (Psst! Click the buttons to learn more about me!)
+      </div>
+    </div>
+  </main>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <footer class="kitty-footer">
+    <div class="container">
+      <p class="footer-text">
+        Made with 
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="heart-icon"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        by Uriel Laroya &copy; <span id="currentYear"></span>
+      </p>
+    </div>
+  </footer>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Set current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Fade in animation
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        document.querySelector('.home-content').classList.add('loaded');
+      }, 100);
+    });
+  </script>
+</body>
 </html>
